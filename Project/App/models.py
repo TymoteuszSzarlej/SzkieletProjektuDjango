@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.utils import timezone
 
 # Importy dla pól specyficznych dla PostgreSQL (opcjonalne)
-from django.contrib.postgres.fields import ArrayField
+'''from django.contrib.postgres.fields import ArrayField'''
 
 
 # --- Modele pomocnicze do demonstracji relacji ---
@@ -214,13 +214,13 @@ class ModelSzablonowy(models.Model):
         help_text="Przechowuje dane w formacie JSON."
     )
     # Wymaga importu: from django.contrib.postgres.fields import ArrayField
-    pole_array = ArrayField(
+    '''pole_array = ArrayField(
         models.CharField(max_length=100),  # Definiujemy, że to będzie tablica stringów
         blank=True,
         null=True,
         default=list, # Domyślnie pusta lista
         help_text="Tablica (lista) wartości, np. ['tag1', 'tag2']"
-    )
+    )'''
 
 
     # === 10. META OPCJE ===
