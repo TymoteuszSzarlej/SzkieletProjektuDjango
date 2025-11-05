@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tacc - System Zarządzania{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007bff;
+        }
+        h1 { color: #2c3e50; margin: 0; }
+        h2 { color: #34495e; margin: 10px 0; }
+        h3 { color: #16a085; margin: 8px 0; }
+        h4 { color: #27ae60; margin: 6px 0; }
+        h5 { color: #e67e22; margin: 4px 0; }
+        h6 { color: #e74c3c; margin: 2px 0; }
+        footer {
+            background-color: #ecf0f1;
+            padding: 10px;
+            margin-top: 20px;
+            border-top: 1px solid #bdc3c7;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin-bottom: 20px;
+            background: gradient(to right, turquoise, magenta);
+            padding: 10px;
+            border-radius: 5px;            
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{% block projectHeader %}Projekt: Tacc - Zintegrowany System Zarządzania{% endblock %}</h1>
+    </header>
+
+    <main>
+        {% block packetSection %}
+        <section>
+            <header>
+                <h2>{% block packetHeader %}{% endblock %}</h2>
+            </header>
+
+            {% block appSection %}
+            <section>
+                <header>
+                    <h3>{% block appHeader %}{% endblock %}</h3>
+                </header>
+
+                {% block moduleSection %}
+                <section>
+                    <header>
+                        <h4>{% block moduleHeader %}{% endblock %}</h4>
+                    </header>
+
+                    {% block functionSection %}
+                    <section>
+                        <header>
+                            <h5>{% block functionHeader %}{% endblock %}</h5>
+                        </header>
+
+                        {% block modelSection %}
+                        <section>
+                            <header>
+                                <h6>{% block modelHeader %}{% endblock %}</h6>
+                            </header>
+
+                            {% block content %}{% endblock %}
+
+                            <footer>
+                                {% block modelFooter %}{% endblock %}
+                            </footer>
+                        </section>
+                        {% endblock %}
+
+                        <footer>
+                            {% block functionFooter %}{% endblock %}
+                        </footer>
+                    </section>
+                    {% endblock %}
+
+                    <footer>
+                        {% block moduleFooter %}{% endblock %}
+                    </footer>
+                </section>
+                {% endblock %}
+
+                <footer>
+                    {% block appFooter %}{% endblock %}
+                </footer>
+            </section>
+            {% endblock %}
+
+            <footer>
+                {% block packetFooter %}{% endblock %}
+            </footer>
+        </section>
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block projectFooter %}
+            <p>&copy; 2025 Tacc. Wszelkie prawa zastrzeżone.</p>
+        {% endblock %}
+    </footer>
+</body>
+</html>

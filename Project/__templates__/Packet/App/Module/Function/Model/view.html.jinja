@@ -1,0 +1,41 @@
+{% extends "Packet/App/Module/Function/function.html.jinja" %} 
+
+
+{% block modelHeader %} {{ block.super }}
+    Widok: Lista Transakcji
+{% endblock %} 
+
+{% block content %} {{ block.super }}
+    <h4>Oto Twoje ostatnie transakcje:</h4>
+    
+    <table border="1" style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #f4f4f4;">
+                <th style="padding: 8px;">Data</th>
+                <th style="padding: 8px;">Opis</th>
+                <th style="padding: 8px;">Kategoria</th>
+                <th style="padding: 8px;">Kwota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 8px;">2025-11-04</td>
+                <td style="padding: 8px;">Zakupy spożywcze</td>
+                <td style="padding: 8px;">Jedzenie</td>
+                <td style="padding: 8px;">-150.00 PLN</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px;">2025-11-03</td>
+                <td style="padding: 8px;">Wpływ - Wynagrodzenie</td>
+                <td style="padding: 8px;">Praca</td>
+                <td style="padding: 8px;">+5000.00 PLN</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <a href="#">Dodaj nową transakcję</a>
+{% endblock %} 
+
+{% block modelFooter %} {{ block.super }}
+    <p>Stopka widoku listy transakcji.</p>
+{% endblock %} 

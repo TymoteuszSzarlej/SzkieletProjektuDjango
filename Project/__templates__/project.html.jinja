@@ -1,0 +1,85 @@
+{% extends "__base__.html.jinja" %}
+
+{% block projectHeader %}
+    {{ block.super }}
+    Projekt: <strong>Tacc - Zintegrowany System Zarządzania</strong>
+{% endblock %}
+
+{% block packetSection %}
+<section>
+    <header>
+        <h2>{% block packetHeader %}Pakiet: <strong>System Księgowy</strong>{% endblock %}</h2>
+    </header>
+
+    {% block appSection %}
+    <section>
+        <header>
+            <h3>{% block appHeader %}Aplikacja: <strong>Rachunkowość</strong>{% endblock %}</h3>
+        </header>
+
+        {% block moduleSection %}
+        <section>
+            <header>
+                <h4>{% block moduleHeader %}Moduł: <strong>Księgi i Transakcje</strong>{% endblock %}</h4>
+            </header>
+
+            {% block functionSection %}
+            <section>
+                <header>
+                    <h5>{% block functionHeader %}Funkcje: <strong>Przegląd i Edycja</strong>{% endblock %}</h5>
+                </header>
+
+                {% block modelSection %}
+                <section>
+                    <header>
+                        <h6>{% block modelHeader %}Model: <strong>Transakcja</strong>{% endblock %}</h6>
+                    </header>
+
+                    {% block content %}
+                        <p>To jest zawartość modelu „Transakcja”.</p>
+                    {% endblock %}
+
+                    <footer>
+                        {% block modelFooter %}
+                            <p>Stopka modelu Transakcja.</p>
+                        {% endblock %}
+                    </footer>
+                </section>
+                {% endblock %}
+
+                <footer>
+                    {% block functionFooter %}
+                        <p>Stopka sekcji funkcji.</p>
+                    {% endblock %}
+                </footer>
+            </section>
+            {% endblock %}
+
+            <footer>
+                {% block moduleFooter %}
+                    <p>Stopka modułu Księgi i Transakcje.</p>
+                {% endblock %}
+            </footer>
+        </section>
+        {% endblock %}
+
+        <footer>
+            {% block appFooter %}
+                <p>Stopka aplikacji Rachunkowość.</p>
+            {% endblock %}
+        </footer>
+    </section>
+    {% endblock %}
+
+    <footer>
+        {% block packetFooter %}
+            <p>Stopka pakietu System Księgowy.</p>
+        {% endblock %}
+    </footer>
+</section>
+{% endblock %}
+
+{% block projectFooter %}
+    {{ block.super }}
+    <p>&copy; 2025 Tacc. Wszelkie prawa zastrzeżone.</p>
+{% endblock %}
